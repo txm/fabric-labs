@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/http-server/bin/http-server -p8492 htdocs",
+    "deploy": "node deploy",
+    "dev": "sh dev.sh",
     "test": "mocha"
   },
   "repository": {

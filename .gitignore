@@ -28,7 +28,9 @@ node_modules
 
 # temp
 .*.js.swp
+*.swp
 
 # local
 credentials.json
 deploy.json
+

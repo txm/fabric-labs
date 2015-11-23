@@ -6,11 +6,24 @@
     <title>fabric.js</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
     <script src="bundle.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="/styles/layout.css">
   </head>
  
   <body>
+
+    <div id="draggable" class="ui-widget-content terminal"></div>
+ 
+    <div id="draggable2" class="ui-widget-content">
+      <ul>
+        <li><a href="#" id="save">Save</a></li>
+        <li><a href="#" id="load">Load</a></li>
+      </ul>
+    </div>
+ 
     <canvas id="c" style="border:1px solid black;" ></canvas>
+
   </body>
  
 </html>

@@ -8,7 +8,7 @@
     "dev": "node dev",
     "test": "mocha",
     "commit": "commit-wizard",
-    "watchify": "watchify ./node_modules/fabric-browserify/dist/fabric.js main.js layout.js -o htdocs/bundle.js -v"
+    "watchify": "watchify ./node_modules/fabric-browserify/dist/fabric.js main.js canvas.js events.js layout.js -o htdocs/bundle.js -v"
   },
   "repository": {
     "type": "git",

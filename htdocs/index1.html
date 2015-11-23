@@ -24,20 +24,17 @@
 	// DOM properly initialized (courtesy jquery)
 	$(function () {
 		
-		// Obtain a canvas drawing surface from fabric.js
-		var canvas = new fabric.Canvas('c');
- 
-		// Create a text object. 
-		// Does not display it-the canvas doesn't 
-		// know about it yet.
-		var hi = new fabric.Text('hello, world.', {
-			left: canvas.getWidth() / 2,
-			top: canvas.getHeight() / 2		
-		});
-	
-		// Attach it to the canvas object, then (re)display
-		// the canvas.	
-		canvas.add(hi);
+// reference canvas element (with id="c")
+var canvasEl = document.getElementById('c');
+
+// get 2d context to draw on (the "bitmap" mentioned earlier)
+var ctx = canvasEl.getContext('2d');
+
+// set fill color of context
+ctx.fillStyle = 'blue';
+
+// create rectangle at a 100,100 point, with 20x20 dimensions
+ctx.fillRect(100, 100, 20, 20);
 				
 	});
 </script>

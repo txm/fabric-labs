@@ -1,0 +1,112 @@
+<!DOCTYPE html>    
+<head>
+    <meta charset="utf-8">
+    <title>fabric.js-simple text display</title>
+	
+	<!-- Get version 1.1.0 of Fabric.js from CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.1.0/fabric.all.min.js" ></script>
+ 
+	<!-- Get the highest 1.X version of jQuery from CDN. Required for ready() function. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+ 
+<body>
+		<!-- A canvas tag is required or 
+			 Fabric.js doesn't know where to draw. -->
+		<canvas id="c" style="border:1px solid black;" ></canvas>
+</body>
+ 
+<script>
+	// Place script tags at the bottom of the page.
+	// That way progressive page rendering and 
+	// downloads are not blocked.
+ 
+	// Run only when HTML is loaded and 
+	// DOM properly initialized (courtesy jquery)
+	$(function () {
+
+// create a wrapper around native canvas element (with id="c")
+var canvas = new fabric.Canvas('c');
+
+// create a rectangle object
+var rect = new fabric.Rect({
+  left: 140,
+  top: 120,
+  fill: 'red',
+  width: 20,
+  height: 20,
+  angle: 45
+
+});
+
+// "add" rectangle onto canvas
+canvas.add(rect);
+
+rect.set({ left: 20, top: 50 });
+
+canvas.renderAll();
+
+circle = new fabric.Circle({
+  radius: 20, fill: 'green', left: 100, top: 100
+});
+var triangle = new fabric.Triangle({
+  width: 20, height: 30, fill: 'blue', left: 50, top: 50
+});
+var polyline = new fabric.Polyline([
+    { x: 10, y: 10 },
+    { x: 50, y: 30 },
+    { x: 40, y: 70 },
+    { x: 60, y: 50 },
+    { x: 100, y: 150 },
+    { x: 40, y: 100 }
+  ], {
+  stroke: 'red',
+  left: 100,
+  top: 100
+});
+var polygon = new fabric.Polygon([
+    { x: 10, y: 10 },
+    { x: 50, y: 30 },
+    { x: 40, y: 70 },
+    { x: 60, y: 50 },
+    { x: 100, y: 150 },
+    { x: 40, y: 100 }
+  ], {
+  stroke: 'red',
+  left: 150,
+  top: 150
+});
+var rect = new fabric.Rect({
+  width: 20, height: 30, fill: 'green', left: 70, top: 70
+});
+var line = new fabric.Line([ 50, 25, 50, 75 ],
+{
+      fill: 'red',
+      stroke: 'red',
+      strokeWidth: 5,
+      selectable: false
+});
+var ellipse = new fabric.Ellipse({
+    top: 50,
+    left: 100,
+    rx: 75,
+    ry: 50,
+    fill: '#999999',
+    stroke: '#000000',
+    strokeWidth: 2
+});
+
+
+canvas.add(circle, triangle, polyline, polygon, rect, line);
+
+rect.set('fill', 'cyan');
+rect.set({ strokeWidth: 5, stroke: 'rgba(100,200,200,0.5)' });
+rect.set('angle', 15).set('flipY', true);
+
+canvas.renderAll();
+	});
+</script>
+		
+</head>
+ 
+ 
+</html>
